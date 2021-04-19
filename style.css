@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+body{
+    overflow-x: hidden;
+}
+#banner{
+    background: linear-gradient(rgba(129, 64, 64, 0.05), rgb(168, 166, 166)) ,url(image/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+}
+.banner-text{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 180px;
+
+}
+
+.banner-text h1{
+    font-size: 130px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+.banner-text p{
+    font-size: 20px;
+    font-family: 'ZCOOL XiaoWei', serif;
+    /* font-style: italic; */
+}
+.banner-btn{
+    margin: 70px auto 0;
+}
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: white;
+    border: .5px solid white;
+    position: relative;
+    z-index: 1;
+    transition:  color 0.5s  ;
+}
+.banner-btn a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: -1;
+    transition: 0.5s;
+}
+.banner-btn a:hover span{
+    width: 100%;
+
+}
+.banner-btn a:hover {
+   color: black;
+
+ }
+
+ .sideNav{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top:0;
+    background-color: rgb(180, 141, 148);
+    z-index: 2;
+    transition: 0.5s ease-in;
+    transform: translateX(100%);
+
+ }
+ .sideNav ul{
+     margin-top: 40%;
+    justify-content: space-around;
+    flex-direction: column;
+    display: flex;
+    /* position: absolute; */
+
+ }
+ .nav-links li{
+    list-style: none;
+    margin: 50px 20px;
+    align-items: center;
+}
+
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+.burger{
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top:25px;
+    z-index: 3;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color:rgb(243, 239, 239); 
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }to{
+        opacity: 1;
+        transform:  translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+ 
+#feature{
+    width: 100%;
+    padding: 70px  0;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p{
+    margin:  auto;
+    font-size: 30px;
+    color: rgb(168, 166, 166);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.title-text p::after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(rgba(129, 64, 64, 0.05), rgb(168, 166, 166));
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius:35px ;
+
+}
+.title-text h1{
+    font-size: 50px;
+}
+
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+
+}
+.freatures{
+    flex-basis: 50%;
+}
+.freatures-img{
+    flex-basis: 50%;
+    margin: auto;
+
+}
+
+.freatures-img img{
+    width: 70%;
+   border-radius: 10px; 
+
+}
+
+.freatures h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:  rgb(255, 175, 175);
+}
+
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.features-icon .fa{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color:rgb(255, 175, 175) ;
+    /* border: 1px solid rgb(168, 166, 166)  ; */
+}
+
+.features-text p{
+     padding: 0 20px;
+     text-align: initial;
+}
+
+
+
+#brand{
+    width: 100%;
+    padding: 70px 0;
+     background: #d3afaf;
+}
+
+#brand h1{
+    color: rgb(255, 255, 255);
+}
+
+.brand-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-brand{
+    flex-basis: 6%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    /* position: relative; */
+}
+
+.single-brand img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+
+.big-brand{
+    flex-basis: 38%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.big-brand img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),rgb(192, 104, 104));
+    opacity: 0;
+    transition: 1s;
+
+}
+.big-brand:hover .overlay{
+    opacity: 1;
+}
+
+.brand-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: 1s;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%; 
+}
+
+.brand-desc p{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 150%;
+
+}
+
+.big-brand:hover .brand-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+
+
+
+
+#faq{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.faq-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.faq-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px rgb(224, 155, 155);
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.faq-col p{
+    font-size: 14 px;
+
+}
+
+
+.question{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.faq-col:hover {
+    transform: translateY(-7px);
+}
+
+#footer{
+    padding: 100px 0 20px;
+    background: #d3afaf;
+    position: relative;
+}
+
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-right{
+    text-align: right;
+}
+
+.footer-row h1{
+    margin: 10px 0;
+
+}
+.footer-left img{
+    width: 50%;
+}
+.footer-row p{
+    line-height: 35px;
+    
+}
+
+.footer-left .fa, .footer-right .fa{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 10px;
+}
+
+.footer-img{
+    max-width: 370px;
+    opacity: 0.3;
+    position: absolute;
+    left: 50%;
+    top: 24%;
+    transform: translate(-50%,-50%);
+}
+
+.social-links{
+    text-align: center;
+
+}
+.social-links .fa{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid  #ffffff;
+    margin: 40px 5px 0;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.social-links .fa:hover{
+    background: #ffffff;
+    color: pink ;
+    transform: translateY(-7px);
+}
+
+.social-links p{
+    font-size: 12px;
+    margin-top: 20px;
+
+}
+@media screen and (max-width:770px) {
+    .banner-text h1{
+        font-size: 44px;
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    };
+
+    .title-text h1{
+        font-size: 35px;   
+    }
+    .freatures{
+        flex-basis: 100%;
+    }
+    .freatures-img{
+        flex-basis: 100%;
+    }
+    .freatures-img img{
+        width: 100%;
+    }
+    .big-brand{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .brand-desc p{
+        font-size: 12px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .big-brand:hover .brand-desc{
+        bottom: 25% !important;
+    }
+    .faq-col{
+        flex-basis: 100%;
+    }
+    .footer-left, .footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+
+    .footer-img{
+        top:15% !important
+    }
+}    
